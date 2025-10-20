@@ -6,7 +6,7 @@
 
 #### Platform Used
 - Development was done primarily on **macOS (Sonoma 14.0)**.
-- It should also run on **Windows 10/11** as long as **Python 3.11* and the required packages are installed.
+- It should also run on **Windows 10/11** as long as **Python 3.11** and the required packages are installed.
 
 #### Software Used
 - **Programming Language:** Python 3.11
