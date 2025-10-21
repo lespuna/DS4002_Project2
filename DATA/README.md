@@ -24,3 +24,8 @@ The dataset is aggregated at regional levels with no personally identifiable inf
 | ZHVI (USD)     | Smoothed, seasonally adjusted estimate of typical home value for that metro area, measured in U.S. dollars.         | 1,050,000               |
 
 ## 6. Explanatory Plots
+- **Plot 1:** Absolute Home Values Across Major U.S. Metros Over Time
+  ![Time series chart showing ZHVI growth](/OUTPUTS/eda_multicity_levels.png)
+- **Plot 2:** ZHVI Year-over-Year (YoY) % Change
+  ![Time series chart showing the annual rate of change of ZHVI](/OUTPUTS/eda_multicity_yoy.png)
+
