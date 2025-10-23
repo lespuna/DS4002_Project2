@@ -26,6 +26,30 @@
   ```
 
 ### Map of Repository
+```
+.
+├── DATA
+│   ├── Metro_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv
+│   ├── README.md
+│   └── zhvi_clean_long.csv
+├── LICENSE
+├── OUTPUTS
+│   ├── eda_multicity_indexed.png
+│   ├── eda_multicity_levels.png
+│   ├── eda_multicity_yoy.png
+│   ├── sarima_backtest_results.csv
+│   ├── sarima_success_by_region.csv
+│   └── sarima_summary_by_horizon.csv
+├── README.md
+├── requirements.txt
+└── scripts
+    ├── data_cleaning.ipynb
+    ├── data_exploration.ipynb
+    └── model_building.ipynb
+
+4 directories, 15 files
+
+```
 
 ### Instructions for Reproduction
 
