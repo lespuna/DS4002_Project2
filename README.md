@@ -19,6 +19,8 @@
   - `numpy` (for numerical computations)
   - `matplotlib` (for visualization)
   - `scikit-learn` (for feature extraction, model training, and evaluation)
+  - `seaborn` (for statistical visualization)
+  - `statmodels` (for statistical modeling)
  
   - To install, run the following code:
   ```
