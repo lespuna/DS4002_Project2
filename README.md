@@ -55,3 +55,78 @@
 
 ### Instructions for Reproduction
 
+#### Step 0: Environment Setup
+
+Clone the repository:
+```
+git clone <your_repo_url>
+cd DS4002_Project2
+
+```
+
+Create and activate a virtual environment:
+```
+python3 -m venv venv
+source venv/bin/activate      # macOS/Linux
+venv\Scripts\activate         # Windows
+```
+
+Install all required dependencies:
+```
+pip install -r requirements.txt
+```
+
+#### Step 1: Data Cleaning
+
+Navigate to the `SCRIPTS/` folder and `open data_cleaning.ipynb`
+
+This notebook:
+- Loads the Zillow Home Value Index (ZHVI) dataset from DATA/.
+- Filters for selected metros (New York, Los Angeles, Chicago, Miami, San Francisco).
+- Converts date values to month-end format and reshapes into long format.
+
+The cleaned dataset is saved as `zhvi_clean_long.csv` in the `DATA/` directory.
+
+#### Step 2: Exploratory Data Analysis
+
+Open `data_exploration.ipynb`
+
+This notebook:
+- Visualizes housing price trends and seasonality across metros.
+- Explores correlations and long-term growth patterns.
+- Generated figures (ex. EDA plots) are exported to the `OUTPUTS/` folder.
+
+#### Step 3: Model Building and Backtesting
+
+Open `model_building.ipynb`
+
+The notebook performs the full SARIMA modeling pipeline:
+- Ensures monthly frequency and consistent time indexing.
+- Suggests differencing orders (d, D) using ADF/KPSS tests.
+- Runs a grid search over candidate (p,d,q)(P,D,Q)_m configurations.
+- Conducts rolling-origin backtests with training, validation, and testing folds.
+- Computes error metrics (MAPE, sMAPE, RMSE, MAE) for each forecast horizon (3, 6, and 12 months).
+
+Intermediate and final results are saved in the `OUTPUTS/` folder as:
+- `sarima_backtest_results.csv`
+- `sarima_summary_by_horizon.csv`
+- `sarima_success_by_region.csv`
+
+#### Step 4: Model Evaluation and Diagnostics
+
+Evaluate model performance using aggregated results in the summary CSVs.
+Run the “Diagnostics on One Example Fit” cell in `model_building.ipynb` to visualize:
+- Residual autocorrelation (ACF) plots
+- Normality (Q–Q) plots
+
+These help confirm that model residuals behave like white noise and the SARIMA specification is appropriate.
+
+#### Step 5: Reproduce Results
+
+To fully reproduce project results:
+Run notebooks sequentially in this order:
+- `data_cleaning.ipynb`
+- `data_exploration.ipynb`
+- `model_building.ipynb`
+
+Verify that output files and plots appear in the `OUTPUTS/` directory.
